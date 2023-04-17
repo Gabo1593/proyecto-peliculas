@@ -1,0 +1,19 @@
+{
+  "name": "proyectopeliculas",
+  "version": "1.0.0",
+  "description": "Proyecto de peliculas, basado en el curso de consumo practico de consumo de api rest de Platzi",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabo1593/proyecto-peliculas.git"
+  },
+  "author": "gabo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gabo1593/proyecto-peliculas/issues"
+  },
+  "homepage": "https://github.com/Gabo1593/proyecto-peliculas#readme"
+}
