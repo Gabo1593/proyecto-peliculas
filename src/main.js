@@ -19,7 +19,7 @@ async function getTrendingMoviesPreview(){
 
     //mostrar las peliculas en tencendcias 
     movies.forEach(movie => {
-      const trendingPreviewMoviesContainer = document.querySelector('#trendingPreview .trendingPreview-movieList')
+      const trendingMoviesPreviewList  = document.querySelector('#trendingPreview .trendingPreview-movieList')
       
       const movieContainer = document.createElement('div');
       movieContainer.classList.add('movie-container');
@@ -33,7 +33,7 @@ async function getTrendingMoviesPreview(){
       );
   
       movieContainer.appendChild(movieImg);
-      trendingPreviewMoviesContainer.appendChild(movieContainer);
+      trendingMoviesPreviewList.appendChild(movieContainer);
     });
     
 }
@@ -46,7 +46,7 @@ async function getCategoriesPreview(){
 
     //mostrar las peliculas en tencendcias 
     categories.forEach(category => {
-      const previewcategoriesContainer = document.querySelector('#categoriesPreview .categoriesPreview-list')
+      const categoriesPreviewList = document.querySelector('#categoriesPreview .categoriesPreview-list')
       
      const categoryContainer = document.createElement('div');
      categoryContainer.classList.add('category-container');
@@ -57,22 +57,15 @@ async function getCategoriesPreview(){
         const categoryTitleText = document.createTextNode(category.name);
         categoryTitle.appendChild(categoryTitleText);
         categoryContainer.appendChild(categoryTitle);
-        previewcategoriesContainer.appendChild(categoryContainer);
+        categoriesPreviewList.appendChild(categoryContainer);
 
-
-    //   categoryImg.setAttribute(
-    //     'src',
-    //     'https://image.tmdb.org/t/p/w300' + category.poster_path,
-    //   );
-  
-     
     });
     
 }
 
-botonOscuro.addEventListener("click", cambio)
+botonOscuro.addEventListener("click", modoOscuro)
 
-function cambio(){
+function modoOscuro(){
     fondo.classList.toggle("active");
     h1.classList.toggle("active");
     h2.classList.toggle("active");
@@ -80,5 +73,4 @@ function cambio(){
     
     
 }
-getTrendingMoviesPreview();
-getCategoriesPreview()
+
