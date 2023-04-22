@@ -101,6 +101,11 @@ button {
   font-size: 14px;
   cursor: pointer;
 }
+.header-container .icono{
+  background: white;
+  width: 32px;
+  border-radius: 50%;
+}
 .header-container .icono img{
   width: 30px;
   z-index: 1;
