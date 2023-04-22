@@ -93,6 +93,11 @@ trendingPreviewSection.classList.add("inactive");
 categoriesPreviewSection.classList.add("inactive");
 genericSection.classList.add("inactive");
 movieDetailSection.classList.remove("inactive");
+
+//["#movie", "2122"]
+const [_, movieId] = location.hash.split("=");
+
+    getMovieById(movieId);
 }
 
 function searchPage(){
@@ -112,8 +117,8 @@ genericSection.classList.remove("inactive");
 movieDetailSection.classList.add("inactive");
 
 //["#search", "id-name"]
-const [_, query] = location.hash.split("=");
-getMoviesBySearch(query);
+const [_, movieId] = location.hash.split("=");
+getMoviesBySearch(movieId);
 }
 
 function  trensdsPage(){

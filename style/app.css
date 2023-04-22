@@ -39,8 +39,9 @@ body {
   padding: 0;
 }
 body.active{
-  background-color:  rgb(42, 41, 41);
+  background-color: #050606;
   position: relative;
+  color: #EEEAF2;
   z-index: 1;
 }
 
@@ -63,9 +64,7 @@ h1.active{
 h2.active{
   color: #EEEAF2;
 }
-h3.active{
-  color: #EEEAF2;
-}
+
 
 h2 {
   font-size: 18px;
@@ -74,9 +73,11 @@ h2 {
 }
 
 h3 {
-  color: var(--purple-dark-2);
   font-weight: var(--font-weight-text2);
   font-size: 16px;
+}
+h3.active{
+  color: #EEEAF2;
 }
 
 input {
@@ -117,6 +118,9 @@ button {
 .trendingPreview-header, .categoriesPreview-title {
   margin-bottom: 24px;
 }
+.categoriesPreview-title.active{
+  color: #EEEAF2;
+}
 
 .movie-container {
   cursor: pointer;
@@ -156,6 +160,9 @@ button {
 
 .header-title {
   margin-bottom: 16px;
+}
+.header-title--categoryView.active {
+ color: #EEEAF2;
 }
 
 .header-arrow {
@@ -240,6 +247,9 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.category-title.active{
+  color: #EEEAF2;
+}
 
 .category-title::before {
   content: '••••';
@@ -302,11 +312,17 @@ button {
   background-color: var(--purple-light-1);
 }
 
+.movieDetail-container.active{
+  background: #050606;
+}
 .movieDetail-title {
   display: inline-block;
   width: 80%;
   margin: 0 0 16px 0;
   padding: 0;
+}
+.movieDetail-title.active{
+  color: #EEEAF2;
 }
 
 .movieDetail-score {
@@ -332,6 +348,11 @@ button {
 
 .relatedMovies-title {
   margin-bottom: 16px;
+
+}
+.relatedMovies-title.active {
+  color: #EEEAF2;
+  
 }
 
 .relatedMovies-scrollContainer {

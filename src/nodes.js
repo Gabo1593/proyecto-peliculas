@@ -24,7 +24,10 @@ const searchFormInput = X('#searchForm input');
 // const searchFormBtn = X('#searchBtn');
 
 // const trendingBtn = X('.trendingPreview-btn');
+const relatedMoviesTitle = X(".relatedMovies-title")
 
 const movieDetailTitle = X('.movieDetail-title');
 const movieDetailDescription = X('.movieDetail-description');
 const movieDetailScore = X('.movieDetail-score');
+const categoryTitle = X(".category-title");
+const categoriesPreviewTitle = X(".categoriesPreview-title");
