@@ -51,13 +51,14 @@ trendingPreviewSection.classList.remove("inactive");
 categoriesPreviewSection.classList.remove("inactive");
 genericSection.classList.add("inactive");
 movieDetailSection.classList.add("inactive");
+posterPath.classList.add("inactive");
 
 }
 
 function categoriesPage(){
     console.log("Categories");
     window.scrollTo(0, 0);
-
+    posterPath.classList.add("inactive");
 headerSection.classList.remove("header-container--long");
 headerSection.style.background = "";
 arrowBtn.classList.remove("inactive");
@@ -80,7 +81,7 @@ getMoviesByCategory(categoryId);
 
 function  movieDetailsPage(){
     console.log("Movies");
-    
+    posterPath.classList.remove("inactive");
 headerSection.classList.add("header-container--long");
 // headerSection.style.background = "";
 arrowBtn.classList.remove("inactive");
@@ -123,7 +124,7 @@ getMoviesBySearch(movieId);
 
 function  trensdsPage(){
     console.log("Trensds");
-    
+    posterPath.classList.add("inactive");
     headerSection.classList.remove("header-container--long");
     headerSection.style.background = "";
     arrowBtn.classList.remove("inactive");

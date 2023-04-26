@@ -194,6 +194,7 @@ button {
   width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  background: grey;
 }
 .header-searchForm button {
   width: 56px;
@@ -385,7 +386,7 @@ button {
   
 
 /* Footer */
-footer {
+footer div{
   background-color: var(--purple-medium-3);
   color: var(--purple-light-2);
   text-align: center;
@@ -393,10 +394,103 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
 }
 
+footer div img{
+  width: 30px;
+}
+.imgPosterPath{
+  position: relative;
+  height: 400px;
+  left: 50px;
+  bottom: 100px;
+  border-radius: 30px;
+}
 
 /* Navigation */
 .inactive {
   display: none;
+}
+@media (max-width:850px){
+.imgPosterPath{
+  display: none;
+}
+}
+
+@media (min-width:400px){
+  h1{
+    font-size: 2.3rem;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 20px;
+  }
+    .relatedMovies-scrollContainer {
+      position: absolute;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: calc(100vw - 24px);
+      padding-bottom: 16px;
+      height: 400px;
+  }
+  .relatedMovies-scrollContainer .movie-container {
+    display: inline-block;
+    margin-right: 8px;
+    height: 95%;
+  }
+  .relatedMovies-scrollContainer .movie-img{
+    height: 100%;
+    width: auto;
+    max-width: 1250px;
+    max-height: 1875px;
+  }
+  .trendingPreview-movieList {
+    height: 414px;
+}
+  .trendingPreview-movieList .movie-container {
+    height: 100%;
+  }
+  .trendingPreview-movieList .movie-container .movie-img {
+    height: 100%;
+    max-height: 2250px;
+    width: auto;
+    max-width: 1050px;
+  }
+.movieDetail-container{
+  width: 100%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+}
+
+
+
+
+@media (min-width:850px){
+  /* .genericList-container .inactive {
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 10px;
+   place-items: center;
+  padding: 32px 24px;
+  } */
+
+  .genericList-container .movie-container{
+    width: auto;
+  }
+  .relatedMovies-scrollContainer {
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: normal;
+    width: calc(100vw - 24px);
+    padding-bottom: 16px;
+    height: auto;
+  }
+
 }

@@ -21,6 +21,7 @@ function createMovies(movies, container){
     const movieContainer = document.createElement('div');
     movieContainer.classList.add('movie-container');
     movieContainer.addEventListener("click", ()=>{
+      posterPath.innerHTML = "";
       location.hash = "#movie=" + movie.id;
     })
 
@@ -76,7 +77,7 @@ createMovies(movies, genericSection);
 
 async function getMovieById(id){
   const { data: movie } = await api("movie/" + id);
-  
+  // headerSection.innerHTML = "";
   const movieImgUrl = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
   headerSection.style.background = `
   linear-gradient(
@@ -88,6 +89,11 @@ async function getMovieById(id){
   movieDetailTitle.textContent = movie.title;
   movieDetailDescription.textContent = movie.overview;
   movieDetailScore.textContent = movie.vote_average;
+  
+  imgPosterPath.src = movieImgUrl;
+  imgPosterPath.classList.add("imgPosterPath");
+  posterPath.appendChild(imgPosterPath);
+  headerSection.appendChild(posterPath);
 
   createCategories(movie.genres, movieDetailCategoriesList);
   getRelatedMoviesId(id);
@@ -108,7 +114,7 @@ async function getMoviesByCategory(id){
     },
   });
   const movies = data.results;
-  
+  // genericSection.innerHTML = "";
   createMovies(movies, genericSection );
 }
 

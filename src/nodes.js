@@ -31,3 +31,7 @@ const movieDetailDescription = X('.movieDetail-description');
 const movieDetailScore = X('.movieDetail-score');
 const categoryTitle = X(".category-title");
 const categoriesPreviewTitle = X(".categoriesPreview-title");
+
+
+const posterPath = document.createElement("div");
+  const imgPosterPath = document.createElement("img");
