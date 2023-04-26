@@ -88,7 +88,7 @@ async function getMovieById(id){
     url(${movieImgUrl})`;
   movieDetailTitle.textContent = movie.title;
   movieDetailDescription.textContent = movie.overview;
-  movieDetailScore.textContent = movie.vote_average;
+  movieDetailScore.textContent = movie.vote_average.toFixed(1);
   
   imgPosterPath.src = movieImgUrl;
   imgPosterPath.classList.add("imgPosterPath");

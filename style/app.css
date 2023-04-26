@@ -406,6 +406,7 @@ footer div img{
   left: 50px;
   bottom: 100px;
   border-radius: 30px;
+  box-shadow: 3px 2px 8px 10px var(--purple-light-1);
 }
 
 /* Navigation */
